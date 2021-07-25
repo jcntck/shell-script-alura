@@ -10,7 +10,7 @@ fi
 
 for img in *.jpg
 do
-	img_name=$(ls $img | awk -F. '{ print $1 }')
+	local img_name=$(ls $img | awk -F. '{ print $1 }')
 	convert $img png/$img_name.png
 done
 }
