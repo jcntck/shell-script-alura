@@ -1,8 +1,24 @@
 #!/bin/bash
 
-IMGS_PATH=~/Downloads/imagens-livros
+to_convert_image(){
+cd ~/Downloads/imagens-livros
 
-for img in $@
+if [ ! -d png ]
+then
+	mkdir png
+fi
+
+for img in *.jpg
 do
-	convert $IMGS_PATH/$img.jpg $IMGS_PATH/$img.png
+	img_name=$(ls $img | awk -F. '{ print $1 }')
+	convert $img png/$img_name.png
 done
+}
+
+to_convert_image 2>erros.txt
+if [ $? -eq 0 ]
+then
+	echo "Images were converted successfully"
+else
+	echo "Images cannot be converted"
+fi
