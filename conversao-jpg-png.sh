@@ -15,7 +15,7 @@ do
 done
 }
 
-to_convert_image 2>erros.txt
+to_convert_image 2>errors.txt
 if [ $? -eq 0 ]
 then
 	echo "Images were converted successfully"
