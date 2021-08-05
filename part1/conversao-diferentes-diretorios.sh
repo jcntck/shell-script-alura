@@ -21,7 +21,7 @@ to_read_dir(){
 	done
 }
 
-to_read_dir ~/Downloads/imagens-novos-livros 2>errors_2.txt
+to_read_dir ./imagens-novos-livros 2>errors_2.txt
 if [ $? -eq 0 ]
 then
 	echo "Images were converted successfully"

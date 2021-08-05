@@ -1,7 +1,7 @@
 #!/bin/bash
 
 to_convert_image(){
-cd ~/Downloads/imagens-livros
+cd  ./imagens-livros
 
 if [ ! -d png ]
 then

@@ -20,3 +20,11 @@ Procura os processos com maior quantidade de memória alocada e salva em um arqu
 Exemplo: `./log/firefox.log`
 
 Log de erros: *./processes_errors.txt*
+
+## Parte 2
+
+### filter_results_apache.sh
+Filtra todos os resultados do apache.log passando um IP como paramêtro.
+
+### filter_requests.sh
+Filtra todos os resultados do apache.log passando um método HTTP como paramêtro.
